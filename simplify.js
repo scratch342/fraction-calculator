@@ -44,7 +44,7 @@ function check(aV, bV){
 		answer2.textContent = answer2C;
 	}else{
 		answer1.textContent = answer1C;
-		answer2C.textContent = answer2C;
+		answer2.textContent = answer2C;
 	}
 
 	simplifyAgain.onclick = function(){
