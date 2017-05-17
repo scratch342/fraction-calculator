@@ -8,7 +8,7 @@ var c = document.querySelector('.c');
 var d = document.querySelector('.d');
 
 var submit = document.querySelector('.on-submit');
-var simplify = document.querySelector('.simplify')
+var simplify = document.querySelector('.simplify');
 clear.addEventListener('click', onClear);
 
 function check(aV, bV, cV, dV){

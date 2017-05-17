@@ -2,3 +2,7 @@
 	position: relative;
 	bottom: 55px;
 }
+a:hover{
+	background-color: #D3D3D;
+	cursor: pointer;
+}
