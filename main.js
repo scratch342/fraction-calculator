@@ -1,6 +1,7 @@
 var select = document.querySelector('.select');
 var answer = document.querySelector('.answer');
 var answerBelow = document.querySelector('.answer2');
+var clear = document.querySelector('.clear')
 var a = document.querySelector('.a');
 var b = document.querySelector('.b');
 var c = document.querySelector('.c');
@@ -8,6 +9,7 @@ var d = document.querySelector('.d');
 
 var submit = document.querySelector('.on-submit');
 var simplify = document.querySelector('.simplify')
+clear.addEventListener('click', onClear);
 
 function check(aV, bV, cV, dV){
 	var ad;
@@ -173,5 +175,12 @@ function hasSubmitted(){
 	check(aValue, bValue, cValue, dValue, selectValue);
 }
 
+function onClear(){
+	a.value = "";
+	b.value = "";
+	c.value = "";
+	d.value = "";
+	a.focus();
+}
 submit.addEventListener('click', hasSubmitted);
 
