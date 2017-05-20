@@ -9,6 +9,8 @@ var d = document.querySelector('.d');
 
 var submit = document.querySelector('.on-submit');
 var simplify = document.querySelector('.simplify');
+var toMixed = document.querySelector('.to-mixed');
+var mixedNumber = document.querySelector('.mixed-number');
 clear.addEventListener('click', onClear);
 
 function check(aV, bV, cV, dV){
@@ -18,6 +20,11 @@ function check(aV, bV, cV, dV){
 	var ac;
 	var answerC;
 	var answerBelowC;
+	var remainder;
+	var mixed;
+	var mixedNumberC;
+	mixedNumber.textContent = "";
+
 	if(selectValue == "+"){
 		ad = (aV * dV);
 		bc = (bV * cV);
@@ -54,6 +61,26 @@ function check(aV, bV, cV, dV){
 			}
 		}
 
+		toMixed.onclick = function(){
+			if(answerC > answerBelowC){
+				mixed = (answerC / answerBelowC);
+				if(answerC % answerBelowC != 0){
+					remainder = answerC % answerBelowC;
+				}
+
+				answerC = parseInt(remainder);
+				toString(answerC);
+
+				mixedNumberC = parseInt(mixed);
+				toString(mixedNumberC)
+
+
+				mixedNumber.textContent = mixedNumberC;
+				answer.textContent = answerC;
+				answerBelow.textContent = answerBelowC;
+				toMixed.disabled = true;
+			}
+		}
 
 	}
 	if(selectValue == "-"){
@@ -93,6 +120,27 @@ function check(aV, bV, cV, dV){
 			}
 		}
 
+		toMixed.onclick = function(){
+			if(answerC > answerBelowC){
+				mixed = (answerC / answerBelowC);
+				if(answerC % answerBelowC != 0){
+					remainder = answerC % answerBelowC;
+				}
+
+				answerC = parseInt(remainder);
+				toString(answerC);
+
+				mixedNumberC = parseInt(mixed);
+				toString(mixedNumberC)
+
+
+				mixedNumber.textContent = mixedNumberC;
+				answer.textContent = answerC;
+				answerBelow.textContent = answerBelowC;
+				toMixed.disabled = true;
+			}
+		}
+
 	}
 	if(selectValue == "x"){
 		ac = (aV * cV);
@@ -125,6 +173,27 @@ function check(aV, bV, cV, dV){
 				answerBelowC = answerBelowC / 3;
 				answer.textContent = answerC;
 				answerBelow.textContent = answerBelowC;
+			}
+		}
+
+		toMixed.onclick = function(){
+			if(answerC > answerBelowC){
+				mixed = (answerC / answerBelowC);
+				if(answerC % answerBelowC != 0){
+					remainder = answerC % answerBelowC;
+				}
+
+				answerC = parseInt(remainder);
+				toString(answerC);
+
+				mixedNumberC = parseInt(mixed);
+				toString(mixedNumberC)
+
+
+				mixedNumber.textContent = mixedNumberC;
+				answer.textContent = answerC;
+				answerBelow.textContent = answerBelowC;
+				toMixed.disabled = true;
 			}
 		}
 
@@ -162,6 +231,27 @@ function check(aV, bV, cV, dV){
 				answerBelow.textContent = answerBelowC;
 			}
 		}
+
+		toMixed.onclick = function(){
+			if(answerC > answerBelowC){
+				mixed = (answerC / answerBelowC);
+				if(answerC % answerBelowC != 0){
+					remainder = answerC % answerBelowC;
+				}
+
+				answerC = parseInt(remainder);
+				toString(answerC);
+
+				mixedNumberC = parseInt(mixed);
+				toString(mixedNumberC)
+
+
+				mixedNumber.textContent = mixedNumberC;
+				answer.textContent = answerC;
+				answerBelow.textContent = answerBelowC;
+				toMixed.disabled = true;
+			}
+		}
 		
 	}
 }
@@ -172,6 +262,7 @@ function hasSubmitted(){
 	bValue = parseInt(b.value);
 	cValue = parseInt(c.value);
 	dValue = parseInt(d.value);
+	toMixed.disabled = false;
 	check(aValue, bValue, cValue, dValue, selectValue);
 }
 

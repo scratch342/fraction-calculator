@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fraction Calculator v2.5</title>
+	<title>Fraction Calculator v3.0</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -10,7 +10,7 @@
   <nav class="navbar navbar-default">
      <div class="container-fluid">
        <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Fraction Calculator v2.5</a>
+            <a class="navbar-brand" href="index.html">Fraction Calculator v3.0</a>
        </div>
        <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav">
@@ -24,24 +24,38 @@
 <h1 class="text-center">Simplify a fraction</h1>
 
 <div class="container-fluid">
-	<div class="center-block col-sm-4">
-		<input class="a">
-		<hr>
-		<input class="b">
-		<br>
-		<button class="onsubmit btn btn-success">Simplify</button>
-		<hr>
-		<button class="clear btn btn-default">Clear</button>
-		<br>
-		<br>
-		<h3 class="answer1 text-center"></h3>
-		<hr>
-		<h3 class="answer2 text-center"></h3>
-		<br>
-		<br>
-		<br>
-		<br>
-		<button class="btn btn-success simplify-again">Simplify Again</button>
+	<div class="row">
+		<div class="center-block col-sm-4">
+			<input class="a">
+			<hr>
+			<input class="b">
+			<br>
+			<button class="onsubmit btn btn-success">Simplify</button>
+			<hr>
+			<button class="clear btn btn-default">Clear</button>
+			<br>
+			<br>
+			<br>
+
+			<div class="row center-block">
+					<div class="col-sm-9">
+					<h1 class="pull-right mixed-number"></h1>
+					</div>
+
+					<div class="col-sm-3">
+					<h3 class="text-center answer1"></h3>
+					<hr>
+					<h3 class="text-center answer2"></h3>
+					</div>
+			</div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<button class="btn btn-success simplify-again">Simplify Again</button>
+			<button class="btn btn-dark to-mixed">Mixed Number</button>
+		</div>
 	</div>
 </div>
 

@@ -4,6 +4,8 @@ var submit = document.querySelector('.onsubmit');
 var clear = document.querySelector('.clear');
 var answer1 = document.querySelector('.answer1');
 var answer2 = document.querySelector('.answer2');
+var toMixed = document.querySelector('.to-mixed');
+var mixedNumber = document.querySelector('.mixed-number');
 
 submit.addEventListener('click', onSubmit);
 clear.addEventListener('click', onClear);
@@ -16,9 +18,13 @@ function onClear(){
 }
 
 function check(aV, bV){
+	toMixed.disabled = false;
 	console.log('hi');
 	var answer1C;
 	var answer2C;
+	var mixed;
+	var mixedNumberC;
+	var remainder;
 
 	answer1C = aV;
 	answer2C = bV;
@@ -73,6 +79,28 @@ function check(aV, bV){
 			answer2.textContent = answer2C;
 		}
 	}
+
+		toMixed.onclick = function(){
+			if(answer1C > answer2C){
+				mixed = (answer1C / answer2C);
+				if(answer1C % answer2C != 0){
+					remainder = answer1C % answer2C;
+				}
+
+				answer1C = parseInt(remainder);
+				toString(answer1C);
+
+				mixedNumberC = parseInt(mixed);
+				toString(mixedNumberC)
+
+
+				mixedNumber.textContent = mixedNumberC;
+				answer1.textContent = answer1C;
+				answer2.textContent = answer2C;
+				toMixed.disabled = true;
+			}
+		}
+
 }
 
 function onSubmit(){

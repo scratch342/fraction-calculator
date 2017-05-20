@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fraction Calculator v2.5</title>
+	<title>Fraction Calculator v3.0</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -10,7 +10,7 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Fraction Calculator v2.5</a>
+            <a class="navbar-brand" href="index.html">Fraction Calculator v3.0</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -22,7 +22,10 @@
       </nav>
 
 	<div class="container-fluid 1">
-		<h1 class="jumbotron text-center">Fraction Calculator v2.5</h1>
+		<div class="jumbotron">
+			<h1 class="text-center">Fraction Calculator v3.0</h1>
+			<p class="text-center">Not compatible with phones or small screens</p>
+		</div>
 
 		<div class="row">
 			<div class="col-sm-5 pull-left">
@@ -48,10 +51,24 @@
 			<hr>
 		<div>
 			<button class="btn btn-primary center-block on-submit">Submit</button>
-			<h3 class="text-center answer"></h3>
-			<hr>
-			<h3 class="text-center answer2"></h3>
+			<br>
+
 			<button class="btn btn-success center-block simplify">Simplify</button>
+			<br>
+			<button class="btn btn-dark center-block to-mixed">Mixed Number</button>
+
+			<div class="row center-block row2">
+					<div class="col-sm-9">
+					<h1 class="mixed-number"></h1>
+					</div>
+
+					<div class="col-sm-3">
+					<h3 class="text-center answer"></h3>
+					<hr>
+					<h3 class="text-center answer2"></h3>
+					</div>
+			</div>
+
 		</div>
 	</div>
 	<script src="main.js"></script>
